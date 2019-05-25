@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Headlines" android:id="@+id/action_headlines"
+          android:icon="@drawable/ic_rss_feed_purple_400_24dp" app:showAsAction="ifRoom"/>
+    <item android:title="@android:string/search_go" android:id="@+id/action_search"
+          android:icon="@drawable/ic_search_purple_400_24dp" app:showAsAction="ifRoom"/>
+</menu>

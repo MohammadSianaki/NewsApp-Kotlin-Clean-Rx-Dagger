@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NewsAppKotlinClean</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="loading">Please wait…</string>
+    <string name="api_key">a1ddb1d0adbd4061b5cd7fea3fcae531</string>
+</resources>
