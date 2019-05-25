@@ -7,9 +7,9 @@ import java.util.*
 
 interface WebService {
 
-    @GET("top-headlines")
+    @GET("everything")
     fun getTopHeadlinesByNewsSource(
-        @Query("source")
+        @Query("domains")
         sourceName: String
     ): Observable<NewsResult>
 

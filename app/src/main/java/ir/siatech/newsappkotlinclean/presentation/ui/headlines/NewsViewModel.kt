@@ -1,17 +1,18 @@
 package ir.siatech.newsappkotlinclean.presentation.ui.headlines
 
 import androidx.lifecycle.MutableLiveData
+import ir.siatech.newsappkotlinclean.domain.commons.Mapper
+import ir.siatech.newsappkotlinclean.domain.entities.ArticleEntity
 import ir.siatech.newsappkotlinclean.domain.usecases.GetTopHeadlinesByNewsSource
-import ir.siatech.newsappkotlinclean.presentation.core.ArticleEntityArticleMapper
+import ir.siatech.newsappkotlinclean.presentation.entities.Article
 import ir.siatech.newsappkotlinclean.presentation.ui.common.BaseViewModel
 import ir.siatech.newsappkotlinclean.presentation.ui.common.SingleLiveEvent
-import javax.inject.Inject
 
-class NewsViewModel @Inject constructor(
-    private val getTopHeadlinesByNewsSource: GetTopHeadlinesByNewsSource
+class NewsViewModel(
+    private val getTopHeadlinesByNewsSource: GetTopHeadlinesByNewsSource,
+    private val articleEntityArticleMapper: Mapper<ArticleEntity, Article>
 ) : BaseViewModel() {
 
-    private val articleEntityArticleMapper = ArticleEntityArticleMapper()
     val viewState: MutableLiveData<TopHeadlinesViewState> = MutableLiveData()
     val errorState: SingleLiveEvent<Throwable?> = SingleLiveEvent()
 
